@@ -60,7 +60,7 @@
 
 我们希望Agent能够根据用户输入的主题，如黑洞、机器人采摘，撰写研究文章。
 
-1. 通过检查输出，我们发现对于人类专家撰稿人会捕捉到的高知名度或重要观点，Agent生成的文章有时会遗漏。
+通过检查输出，我们发现对于人类专家撰稿人会捕捉到的高知名度或重要观点，Agent生成的文章有时会遗漏。
 
 ![](https://ucn3l6pxxkfq.feishu.cn/space/api/box/stream/download/asynccode/?code=YjUxYTc1OTljNGQzYjI3YWRkYTZjZTVlMzllNTBlMTVfQW5IelJFV2VPSnlQd1czQmN3WVJPeUFORUh2ZFEwUzNfVG9rZW46S200M2Jtb09lbzZROHd4M1NUWWNqUXBsbjBiXzE3NjIyNjE0ODE6MTc2MjI2NTA4MV9WNA)
 
@@ -126,7 +126,7 @@
 
 接下来，我们到一些实际案例里，看看如何做错误分析。
 
-1. **案例一：发票处理（也就是我们在第一节见到的）**
+**案例一：发票处理（也就是我们在第一节见到的）**
 
 ![](https://ucn3l6pxxkfq.feishu.cn/space/api/box/stream/download/asynccode/?code=NTg0MjA0MDExM2JlYTJjMzU2YmQ1ZjVkMDFmZDU5N2JfZXVwTmJOZTVBMjVVU0NTVnRPa0lpZGROVWtmcDBubTJfVG9rZW46SDRaa2JVOU9qb3p1aHF4bFVtSGNaNFE4bjRiXzE3NjIyNjE0ODE6MTc2MjI2NTA4MV9WNA)
 
@@ -143,11 +143,11 @@
 
 结果指导： 假设统计发现 LLM 数据提取导致了更多的错误。
 
-1. 结论： 应将精力集中在改进 LLM 数据提取组件上（如优化提示词），而不是花费数周时间徒劳地改进 PDF 转文本组件。
+结论： 应将精力集中在改进 LLM 数据提取组件上（如优化提示词），而不是花费数周时间徒劳地改进 PDF 转文本组件。
 
 ---
 
-2. **案例二：回复客户邮件**
+**案例二：回复客户邮件**
 
 ![](https://ucn3l6pxxkfq.feishu.cn/space/api/box/stream/download/asynccode/?code=Nzk5YWFmMjM2NTkzMmFhZTlkZDEyOGRmYmM2ZGEwZjZfNDk2ZmlBd0JaN0RMQkV5UzI0bTc0RXlDaDVBWmdhUjRfVG9rZW46THZuNGJrYUVabzg5Mmt4RUdhS2MzMlZBbmpyXzE3NjIyNjE0ODE6MTc2MjI2NTA4MV9WNA)
 
@@ -165,7 +165,7 @@
 
 结果指导： 假设统计发现，LLM 编写数据库查询是最常见的错误（例如，占所有问题的 75%），而 LLM 撰写邮件的错误相对较少（例如 30%）。
 
-1. 优先级：首先改进 LLM 编写查询的方式，随后改进撰写最终邮件的提示词。
+优先级：首先改进 LLM 编写查询的方式，随后改进撰写最终邮件的提示词。
 
 ## 三、组件级评估 (Component-Level Evals)
 
