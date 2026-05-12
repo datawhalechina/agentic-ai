@@ -71,6 +71,7 @@ features = [
   "toc.follow"
 ]
 
+[project.markdown_extensions.mdx_truly_sane_lists]
 [project.markdown_extensions.pymdownx.highlight]
 anchor_linenums = true
 line_spans = "__span"
