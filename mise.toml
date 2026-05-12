@@ -1,0 +1,19 @@
+[tasks.serve]
+description = "Start local preview server"
+run = "uv run zensical serve"
+
+[tasks.build]
+description = "Build the site"
+run = "uv run zensical build --clean"
+
+[tasks.lint]
+description = "Lint markdown files"
+run = "uv run rumdl check --disable MD013,MD033,MD041,MD045 docs/"
+
+[tasks.fmt]
+description = "Auto-fix markdown issues"
+run = "uv run rumdl fmt --disable MD013,MD033,MD041,MD045 docs/"
+
+[tasks.clean]
+description = "Remove build output"
+run = "rm -rf site/"
