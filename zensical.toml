@@ -1,0 +1,84 @@
+[project]
+site_name = "Agentic AI 课程笔记"
+site_url = "https://datawhalechina.github.io/agentic-ai/"
+site_description = "吴恩达 Agentic AI 课程中文学习笔记 - Datawhale"
+site_author = "Datawhale"
+copyright = "&copy; 2025 Datawhale"
+repo_url = "https://github.com/datawhalechina/agentic-ai"
+repo_name = "datawhalechina/agentic-ai"
+docs_dir = "docs"
+
+
+nav = [
+  {"首页" = "README.md"},
+  {"1. Agentic工作流简介" = [
+    "1. Agentic工作流简介[Introduction to Agentic Workflows]/1.1 欢迎[Welcome].md",
+    "1. Agentic工作流简介[Introduction to Agentic Workflows]/1.2 什么是Agentic AI[What is agentic AI].md",
+    "1. Agentic工作流简介[Introduction to Agentic Workflows]/1.3 自主性等级[Degrees of autonomy].md",
+    "1. Agentic工作流简介[Introduction to Agentic Workflows]/1.4 Agentic AI的益处[Benefits of agentic AI].md",
+    "1. Agentic工作流简介[Introduction to Agentic Workflows]/1.5 Agentic AI应用[Agentic AI applications].md",
+    "1. Agentic工作流简介[Introduction to Agentic Workflows]/1.6 任务分解-识别工作流程步骤[Task decomposition- identifying the steps in a workflow].md",
+    "1. Agentic工作流简介[Introduction to Agentic Workflows]/1.7 Agentic AI评估（evals）[Evaluating agentic AI (evals)].md",
+    "1. Agentic工作流简介[Introduction to Agentic Workflows]/1.8 Agentic设计模式[Agentic design patterns].md"
+  ]},
+  {"2. 反思设计模式" = [
+    "2. 反思设计模式[Reflection Design Pattern]/2.1 用反思提升任务输出[Reflection to improve outputs of a task].md",
+    "2. 反思设计模式[Reflection Design Pattern]/2.2 为何不只用迭代[Why not just iteration].md",
+    "2. 反思设计模式[Reflection Design Pattern]/2.3 图表生成工作流[Chart generation workflow].md",
+    "2. 反思设计模式[Reflection Design Pattern]/2.5 评估反思的影响[Evaluating the impact of reflection].md",
+    "2. 反思设计模式[Reflection Design Pattern]/2.6 使用外部反馈[Using external feedback].md"
+  ]},
+  {"3. 工具使用" = [
+    "3. 工具使用[Tool Use]/3.1 什么是工具[What are tools].md",
+    "3. 工具使用[Tool Use]/3.2 创建一个工具[Creating a tool].md",
+    "3. 工具使用[Tool Use]/3.3 工具语法[Tool syntax].md",
+    "3. 工具使用[Tool Use]/3.6 代码执行[Code execution].md",
+    "3. 工具使用[Tool Use]/3.7 MCP[MCP].md"
+  ]},
+  {"4. 构建Agentic AI的实用技巧" = [
+    "4. 构建Agentic AI的实用技巧[Practical Tips for Building Agentic AI]/4.1 评估（evals）[Evaluations (evals)].md",
+    "4. 构建Agentic AI的实用技巧[Practical Tips for Building Agentic AI]/4.2 错误分析与制定下一步优先级[Error analysis and prioritizing next steps].md",
+    "4. 构建Agentic AI的实用技巧[Practical Tips for Building Agentic AI]/4.3 更多错误分析示例[More error analysis examples].md",
+    "4. 构建Agentic AI的实用技巧[Practical Tips for Building Agentic AI]/4.4 组件级评估[Component-level evaluations].md",
+    "4. 构建Agentic AI的实用技巧[Practical Tips for Building Agentic AI]/4.6 解决识别到的问题[How to address problems you identify].md",
+    "4. 构建Agentic AI的实用技巧[Practical Tips for Building Agentic AI]/4.7 延迟与成本优化[Latency, cost optimization].md",
+    "4. 构建Agentic AI的实用技巧[Practical Tips for Building Agentic AI]/4.8 开发过程总结[Development process summary].md"
+  ]},
+  {"5. 高度自治智能体的模式" = [
+    "5. 高度自治智能体的模式[Patterns for Highly Autonomous Agents]/5.1 工作流规划[Planning workflows].md",
+    "5. 高度自治智能体的模式[Patterns for Highly Autonomous Agents]/5.2 创建与执行LLM计划[Creating and executing LLM plans].md",
+    "5. 高度自治智能体的模式[Patterns for Highly Autonomous Agents]/5.3 结合代码执行的规划[Planning with code execution].md",
+    "5. 高度自治智能体的模式[Patterns for Highly Autonomous Agents]/5.5 多智能体工作流[Multi-agentic workflows].md",
+    "5. 高度自治智能体的模式[Patterns for Highly Autonomous Agents]/5.7 多智能体系统的通信模式[Communication patterns for multi-agent systems].md",
+    "5. 高度自治智能体的模式[Patterns for Highly Autonomous Agents]/5.10 总结[Conclusion].md"
+  ]}
+]
+
+[project.theme]
+language = "zh"
+features = [
+  "navigation.sections",
+  "navigation.expand",
+  "navigation.top",
+  "navigation.footer",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.path",
+  "search.highlight",
+  "content.code.copy",
+  "content.code.annotate",
+  "content.code.select",
+  "toc.follow"
+]
+
+[project.markdown_extensions.mdx_truly_sane_lists]
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.pymdownx.superfences]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.toc]
+permalink = true

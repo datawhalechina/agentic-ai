@@ -1,0 +1,2 @@
+[global]
+disable = ["MD001", "MD013", "MD033", "MD036", "MD041", "MD045"]
