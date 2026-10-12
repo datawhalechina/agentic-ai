@@ -11,11 +11,14 @@ inventory_table = db.table("inventory")
 transactions_table = db.table("transactions")
 
 
-def create_inventory():
+def create_inventory(inventory_tbl=None):
     """
     Create and store the initial sunglasses inventory in TinyDB.
     Each item has name, item_id, description, quantity_in_stock, and price.
+    Uses the default inventory table when no table is supplied.
     """
+    if inventory_tbl is None:
+        inventory_tbl = inventory_table
     random.seed(42)
 
     sunglasses_data = [
@@ -63,16 +66,19 @@ def create_inventory():
         }
     ]
 
-    inventory_table.truncate()
-    inventory_table.insert_multiple(sunglasses_data)
+    inventory_tbl.truncate()
+    inventory_tbl.insert_multiple(sunglasses_data)
     return sunglasses_data
 
 
-def create_transactions(opening_balance=500.00):
+def create_transactions(opening_balance=500.00, *, transactions_tbl=None):
     """
     Create and store the initial transactions in TinyDB.
     Includes the daily opening balance.
+    Uses the default transactions table when no table is supplied.
     """
+    if transactions_tbl is None:
+        transactions_tbl = transactions_table
     opening_transaction = {
         "transaction_id": "TXN001",
         "customer_name": "OPENING_BALANCE",
@@ -82,8 +88,8 @@ def create_transactions(opening_balance=500.00):
         "timestamp": datetime.now().isoformat()
     }
 
-    transactions_table.truncate()
-    transactions_table.insert(opening_transaction)
+    transactions_tbl.truncate()
+    transactions_tbl.insert(opening_transaction)
     return opening_transaction
 
 
@@ -91,8 +97,8 @@ def seed_db(db_path="store_db.json"):
     db = TinyDB(db_path)
     inventory_table = db.table("inventory")
     transactions_table = db.table("transactions")
-    create_inventory()       # llena inventory_table
-    create_transactions()    # llena transactions_table
+    create_inventory(inventory_table)
+    create_transactions(transactions_tbl=transactions_table)
     return db, inventory_table, transactions_table
 
 
